@@ -1,8 +1,8 @@
 menu:
     Blog: /
     Archive: /archives/
-    # Weibo: http://weibo.com/sunchongsheng
-    # GitHub: https://github.com/pinggod
+    # Weibo: 
+    GitHub: https://github.com/unroll
     # Rss: /atom.xml
 
 favicon: /favicon.png
@@ -18,4 +18,4 @@ logo: /favicon.png
 ga: UA-65933410-1
 
 # Copyright Infomation
-startyear: 2015
+startyear: 2017
