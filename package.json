@@ -1,27 +1,25 @@
 {
-  "name": "hexo-theme-apollo",
+  "name": "apollo",
   "version": "1.0.0",
-  "description": "A hexo theme inspired by vuejs.org",
-  "main": "index.js",
+  "description": "![hexo-theme-apollo](https://cloud.githubusercontent.com/assets/9530963/13026956/08e76eca-d277-11e5-8bfc-2e80cea20a0d.png)",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
   "scripts": {
-    "sass": "gulp sass"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinggod/hexo-theme-apollo"
+    "url": "git+https://github.com/unroll/hexo-theme-apollo.git"
   },
-  "keywords": [
-    "hexo",
-    "theme",
-    "apollo"
-  ],
-  "author": "Sean Sun",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pinggod/hexo-theme-apollo/issues"
+    "url": "https://github.com/unroll/hexo-theme-apollo/issues"
   },
-  "homepage": "https://github.com/pinggod/hexo-theme-apollo#readme",
-  "devDependencies": {
+  "homepage": "https://github.com/unroll/hexo-theme-apollo#readme",
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-sass": "^3.1.0"

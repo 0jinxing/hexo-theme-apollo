@@ -1,6 +1,7 @@
 menu:
     Blog: /
     Archive: /archives/
+    Tags: /tags/
     # Weibo: 
     GitHub: https://github.com/unroll
     # Rss: /atom.xml
