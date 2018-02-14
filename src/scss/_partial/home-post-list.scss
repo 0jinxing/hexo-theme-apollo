@@ -19,5 +19,8 @@
     }
     .read-more {     
         color: #42b983;
+        &:hover{
+            color: #267B54;
+        }
     }
 }

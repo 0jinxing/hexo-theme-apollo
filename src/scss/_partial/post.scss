@@ -56,6 +56,9 @@
     a {
         color: #42b983;
         word-break: break-all;
+        &:hover {
+            color: #267B54;
+        }
     }
     blockquote {
         margin: 2em 0;
