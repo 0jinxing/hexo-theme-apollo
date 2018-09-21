@@ -1,9 +1,7 @@
 menu:
-    Blog: /
     Archive: /archives/
-    # Tags: /tags/
-    # Weibo: 
-    # GitHub: https://github.com/unroll
+    Tags: /tags/
+    Categories: /categories/
     # Rss: /atom.xml
 
 favicon: /favicon.png

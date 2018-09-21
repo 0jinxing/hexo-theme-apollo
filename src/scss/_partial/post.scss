@@ -12,9 +12,11 @@
     .post-info {
         color: #7f8c8d;
         margin: 1.2em 0;
+
         span {
             margin-left: 0.5rem;
         }
+
         a.post-from {
             margin-left: 0.5rem;
             padding: 3px 6px;
@@ -27,9 +29,15 @@
 }
 
 .post-content {
-    h2, h3, h4, h5, h6 {
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         position: relative;
         margin: 1em 0;
+
         a:before {
             content: "#";
             color: #4d939f;
@@ -40,40 +48,52 @@
             font-weight: bold;
         }
     }
-    h4, h5, h6 {
+
+    h4,
+    h5,
+    h6 {
         a:before {
             content: "";
         }
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         font-size: 22px;
     }
 
-    h4, h5, h6 {
+    h4,
+    h5,
+    h6 {
         font-size: 18px;
     }
+
     a {
         color: #4d939f;
         word-break: break-all;
+
         &:hover {
             color: #3b3e47;
         }
     }
+
     blockquote {
         margin: 2em 0;
         padding-left: 20px;
         border-left: 4px solid #4d939f;
     }
+
     img {
         display: block;
         max-width: 100%;
         margin: 1em auto;
     }
-    & > table,
-    & > figure.highlight {
-        box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+
+    &>table,
+    &>figure.highlight {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
     }
+
     .tip {
         position: relative;
         margin: 2em 0;
@@ -82,10 +102,12 @@
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
         background-color: #f8f8f8;
+
         br {
             display: none;
         }
     }
+
     .tip:before {
         position: absolute;
         top: 14px;
@@ -112,6 +134,7 @@
     padding: 1em 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
+
     #mask-image {
         max-width: 95%;
     }
@@ -131,19 +154,25 @@ pre {
     line-height: 1.1em;
     background-color: #f8f8f8;
     overflow-x: auto;
-    table, tr, td {
+
+    table,
+    tr,
+    td {
         width: 100%;
         border-collapse: collapse;
         padding: 0;
         margin: 0;
     }
+
     .gutter {
         display: none;
     }
+
     .code pre {
         padding: 1.2em 1.4em;
         line-height: 1.5em;
         margin: 0;
+
         .line {
             width: auto;
             height: 18px;
@@ -173,7 +202,7 @@ pre {
     }
 }
 
-$signs: ("html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
+$signs: ("html", "js", "bash", "css", "scss", "diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
 @include code-signs($signs);
 
 .highlight.cpp .code:after {
@@ -182,18 +211,22 @@ $signs: ("html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "j
 
 pre {
     color: #525252;
+
     .function .keyword,
     .constant {
-       color: #0092db;
+        color: #0092db;
     }
+
     .keyword,
     .attribute {
         color: #e96900;
     }
+
     .number,
     .literal {
         color: #ae81ff;
     }
+
     .tag,
     .tag .title,
     .change,
@@ -205,15 +238,18 @@ pre {
     .tex .special {
         color: #2973b7;
     }
+
     .symbol,
     .symbol .string,
     .value,
     .regexp {
         color: #4d939f;
     }
+
     .title {
         color: #83B917;
     }
+
     .tag .value,
     .string,
     .subst,
@@ -240,6 +276,7 @@ pre {
     .prompt {
         color: #4d939f;
     }
+
     .comment,
     .java .annotation,
     .python .decorator,
@@ -251,9 +288,11 @@ pre {
     .tex .formula {
         color: #b3b3b3;
     }
+
     .deletion {
         color: #BA4545;
     }
+
     .coffeescript .javascript,
     .javascript .xml,
     .tex .formula,

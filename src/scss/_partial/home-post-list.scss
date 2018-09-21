@@ -1,25 +1,36 @@
 .home.post-list {
     margin: 2em 0;
+
     .post-list-item {
         padding: 1em 0 2em;
         border-bottom: 1px solid #ddd;
+
         &:last-child {
             border-bottom: 0px;
         }
     }
-    .post-content{
-        h2, h3, h4, h5, h6 {
+
+    .post-content {
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             &:before {
                 content: '';
             }
         }
-        & > ul {
+
+        &>ul {
             list-style: initial;
         }
     }
-    .read-more {     
+
+    .read-more {
         color: #4d939f;
-        &:hover{
+
+        &:hover {
             color: #3b3e47;
         }
     }

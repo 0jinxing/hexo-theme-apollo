@@ -3,7 +3,8 @@
     background-color: #4d939f;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -28,7 +29,8 @@ ul {
     margin: 1rem 0;
 }
 
-a, a:active {
+a,
+a:active {
     color: #2c3e50;
     text-decoration: none;
 }
@@ -51,7 +53,8 @@ code {
     white-space: inherit;
 }
 
-iframe, video {
+iframe,
+video {
     max-width: 100%;
     margin: 1rem auto;
     display: block;
@@ -60,17 +63,21 @@ iframe, video {
 table {
     width: 100%;
     margin: 1em auto;
+
     thead {
         background-color: #ddd;
+
         th {
             padding: 5px;
             min-width: 20px;
         }
     }
+
     tbody {
         tr:nth-child(2n) {
             background-color: #eee;
         }
+
         td {
             padding: 5px;
             vertical-align: text-top;
