@@ -1,7 +1,6 @@
 menu:
     Archive: /archives/
-    Tags: /tags/
-    Categories: /categories/
+    Github: https://github.com/unroll
     # Rss: /atom.xml
 
 favicon: /favicon.icon
