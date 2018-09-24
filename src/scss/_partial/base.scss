@@ -3,6 +3,10 @@
     background-color: #4d939f;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html,
 body {
     width: 100%;
