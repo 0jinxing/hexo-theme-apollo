@@ -4,17 +4,8 @@ menu:
     Categories: /categories/
     # Rss: /atom.xml
 
-favicon: /favicon.png
+favicon: /favicon.icon
 logo: /favicon.png
-
-# Comment
-# e.g disqus: seansun
-# disqus:
-# duoshuo:
-
-# Analytics
-# google-analytics:
-ga: UA-65933410-1
 
 # Copyright Infomation
 startyear: 2017
