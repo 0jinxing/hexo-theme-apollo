@@ -28,6 +28,15 @@ mixin posts()
 
 //- Archive Page
 mixin postList()
+    .archive
+        if is_tag() || is_category()
+            h2.archive-header= page.tag || page.category
+        - page.posts.each(function (item) {
+            .post-item
+                +postInfo(item)
+                a.post-title-link(href= url_for(item.path))
+                    != item.title
+        - })
     if is_tag()
         .tags
             - site.tags.filter(function (tage){
@@ -42,15 +51,6 @@ mixin postList()
             - }).each(function (category){
                 a.category-item-link(href=config.root+category.path title=category.name)!= category.name
             - })
-    .archive
-        if is_tag() || is_category()
-            h2.archive-header= page.tag || page.category
-        - page.posts.each(function (item) {
-            .post-item
-                +postInfo(item)
-                a.post-title-link(href= url_for(item.path))
-                    != item.title
-        - })
 
 //- Post Page
 mixin post(item)
