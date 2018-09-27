@@ -37,20 +37,6 @@ mixin postList()
                 a.post-title-link(href= url_for(item.path))
                     != item.title
         - })
-    if is_tag()
-        .tags
-            - site.tags.filter(function (tage){
-                - return tage.posts.length
-            - }).each(function (tag){
-                a.tag-item-link(href=config.root+tag.path title=tag.name)!= tag.name
-            - })
-    else if is_category()
-        .categories
-            - site.categories.filter(function (category){ 
-                - return category.posts.length
-            - }).each(function (category){
-                a.category-item-link(href=config.root+category.path title=category.name)!= category.name
-            - })
 
 //- Post Page
 mixin post(item)

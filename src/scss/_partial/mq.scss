@@ -44,8 +44,12 @@
         }
     }
 
-    .archive .post-item {
-        padding-left: 20px;
+    .archive {
+
+        .post-item,
+        .archive-header {
+            padding-left: 20px;
+        }
     }
 
     .post-content {

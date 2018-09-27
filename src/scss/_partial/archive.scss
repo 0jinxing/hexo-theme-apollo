@@ -1,37 +1,12 @@
-.tags,
-.categories {
-    padding: 0 2em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-
-    a.tag-item-link,
-    a.category-item-link {
-        margin: 0.25rem;
-        padding: 3px 6px;
-        border-radius: 5px;
-        font-size: 12px;
-        color: white;
-    }
-
-    a.tag-item-link {
-        background-color: #70a19f;
-    }
-
-    a.category-item-link {
-        background-color: #759FBD;
-    }
-
-}
-
-
 .archive {
     max-width: 500px;
     margin: auto;
     padding: 2em 0;
 
     .archive-header {
-        margin: .5rem 0 .25rem;
+        padding-left: 50px;
+        font-weight: normal;
+        color: #7f8c8d;
     }
 
     .post-item {
