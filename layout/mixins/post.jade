@@ -5,10 +5,10 @@ mixin postInfo(item)
             if item.from
                 a.post-from(href=item.from target="_blank" title=item.from)!= __('source')
             - item.tags.each(function (tag) {
-                a.post-tag(href=config.root+tag.path title=tag.name)!= tag.name
+                a.post-tag(href=config.root+tag.path title=tag.name)!= tag.name.toUpperCase()
             - })
             - item.categories.each(function (category){
-                a.post-category(href=config.root+category.path title=category.name)!= category.name
+                a.post-category(href=config.root+category.path title=category.name)!= category.name.toUpperCase()
             - })
 
 //- Index Page
@@ -30,7 +30,9 @@ mixin posts()
 mixin postList()
     .archive
         if is_tag() || is_category()
-            h2.archive-header= page.tag || page.category
+            h2.archive-header= (page.tag || page.category).toUpperCase()
+        else
+            h2.archive-header= __('archive')
         - page.posts.each(function (item) {
             .post-item
                 +postInfo(item)
