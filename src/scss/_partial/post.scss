@@ -182,7 +182,7 @@ pre {
     }
 
     .code pre {
-        padding: 1.2em 1.4em;
+        padding: 2.4em 1.4em 1.2em;
         line-height: 1.5em;
         margin: 0;
 
@@ -196,11 +196,11 @@ pre {
 %code-base {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     color: #ccc;
     text-align: right;
     font-size: 0.75em;
-    padding: 5px 10px 0;
+    padding: .6em 1.4em 0;
     line-height: 15px;
     height: 15px;
     font-weight: 600;
@@ -217,10 +217,6 @@ pre {
 
 $signs: ("html", "js", "bash", "css", "scss", "diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
 @include code-signs($signs);
-
-.highlight.cpp .code:after {
-    content: 'C++';
-}
 
 pre {
     color: #525252;
