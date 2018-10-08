@@ -1,7 +1,7 @@
 menu:
     Archive: /archives/
+    Rss: /atom.xml
     Github: https://github.com/unroll
-    # Rss: /atom.xml
 
 favicon: /favicon.ico
 logo: /favicon.ico
