@@ -49,12 +49,22 @@ hr {
     border: 0;
 }
 
+code,
+pre {
+    font-size: .8rem;
+    font-family: 'Roboto Mono', Monaco, courier, monospace;
+}
+
 code {
     margin: 0 2px;
     padding: 3px 5px;
     color: #DE7062;
     border-radius: 2px;
     white-space: inherit;
+}
+
+pre {
+    position: relative;
 }
 
 iframe,

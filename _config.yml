@@ -6,5 +6,8 @@ menu:
 favicon: /favicon.ico
 logo: /favicon.ico
 
+highlight:
+  enable: false
+  
 # Copyright Infomation
 startyear: 2017

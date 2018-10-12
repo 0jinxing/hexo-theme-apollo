@@ -1,0 +1,93 @@
+%code-base {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ccc;
+    text-align: right;
+    font-size: .8rem;
+    padding: .4em .8em 0;
+    line-height: 16px;
+    height: 16px;
+    font-weight: 600;
+}
+
+@mixin code-signs($keys) {
+    @each $key in $keys {
+        code.hljs.#{$key}:after {
+            content: to-upper-case($key);
+            @extend %code-base;
+        }
+    }
+}
+
+$signs: ("html", "js", "bash", "css", "scss", "diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
+@include code-signs($signs);
+
+.hljs {
+    position: static;
+    display: block;
+    overflow-x: auto;
+    padding: 1rem .6rem .6rem;
+    margin: 0;
+    background: #282a36;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+    color: #8be9fd;
+}
+
+.hljs-built_in {
+    color: #ff79c6;
+}
+
+
+.hljs,
+.hljs-subst {
+    color: #f8f8f2;
+}
+
+.hljs-number,
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+    color: #f1fa8c;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+    color: #999999;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-comment {
+    font-weight: lighter;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}

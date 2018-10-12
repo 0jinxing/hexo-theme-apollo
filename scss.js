@@ -11,7 +11,7 @@ function debounce(fn, wait) {
 }
 
 const input = path.join(__dirname, 'src', 'scss', 'apollo.scss');
-const output = path.join(__dirname, 'source', 'css', 'apollo.css');
+const output = path.join(__dirname, 'source', 'style', 'apollo.css');
 
 function build() {
     sass.render({ file: input, outputStyle: 'compressed' }, (error, result) => {
