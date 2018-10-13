@@ -13,17 +13,23 @@
 
 @mixin code-signs($keys) {
     @each $key in $keys {
-        code.hljs.#{$key}:after {
+        .highlight.#{$key} table::after {
             content: to-upper-case($key);
             @extend %code-base;
         }
     }
 }
 
-$signs: ("html", "js", "bash", "css", "scss", "diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
+$signs: ("plain", "html", "js", "bash", "css", "scss", "diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
 @include code-signs($signs);
 
-.hljs {
+.highlight {
+    margin: 1em 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight table {
     position: static;
     display: block;
     overflow-x: auto;
@@ -32,62 +38,62 @@ $signs: ("html", "js", "bash", "css", "scss", "diff", "java", "xml", "python", "
     background: #282a36;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-section,
-.hljs-link {
+.keyword,
+.selector-tag,
+.literal,
+.section,
+.link {
     color: #8be9fd;
 }
 
-.hljs-built_in {
+.built_in {
     color: #ff79c6;
 }
 
 
 .hljs,
-.hljs-subst {
+.subst {
     color: #f8f8f2;
 }
 
-.hljs-number,
-.hljs-string,
-.hljs-title,
-.hljs-name,
-.hljs-type,
-.hljs-attribute,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition,
-.hljs-variable,
-.hljs-template-tag,
-.hljs-template-variable {
+.number,
+.string,
+.title,
+.name,
+.type,
+.attribute,
+.symbol,
+.bullet,
+.addition,
+.variable,
+.template-tag,
+.template-variable {
     color: #f1fa8c;
 }
 
-.hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
+.comment,
+.quote,
+.deletion,
+.meta {
     color: #999999;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-title,
-.hljs-section,
-.hljs-doctag,
-.hljs-type,
-.hljs-name,
-.hljs-strong {
+.keyword,
+.selector-tag,
+.literal,
+.title,
+.section,
+.doctag,
+.type,
+.name,
+.strong {
     font-weight: bold;
 }
 
-.hljs-comment {
+.comment {
     font-weight: lighter;
 }
 
-.hljs-emphasis {
+.emphasis {
     font-style: italic;
 }
