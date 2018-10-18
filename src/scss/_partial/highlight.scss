@@ -43,11 +43,13 @@ $signs: ("plain", "html", "js", "bash", "css", "scss", "diff", "java", "xml", "p
 .selector-tag,
 .literal,
 .section,
+.name,
 .link {
     color: #8be9fd;
 }
 
-.built_in {
+.built_in,
+.attr {
     color: #ff79c6;
 }
 
@@ -60,7 +62,6 @@ $signs: ("plain", "html", "js", "bash", "css", "scss", "diff", "java", "xml", "p
 .number,
 .string,
 .title,
-.name,
 .type,
 .attribute,
 .symbol,

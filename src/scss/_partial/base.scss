@@ -51,7 +51,7 @@ hr {
 
 code,
 pre {
-    font-size: .8rem;
+    font-size: .8em;
     font-family: 'Roboto Mono', Monaco, courier, monospace;
     color: #eee;
 }
@@ -94,5 +94,9 @@ table {
             padding: 5px;
             vertical-align: text-top;
         }
+    }
+
+    pre {
+        margin: 0;
     }
 }
