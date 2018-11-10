@@ -4,7 +4,7 @@
     right: 0;
     color: #ccc;
     text-align: right;
-    font-size: .8rem;
+    font-size: .8em;
     padding: .4em .8em 0;
     line-height: 16px;
     height: 16px;
@@ -27,105 +27,77 @@ $signs: ("plain", "html", "js", "bash", "css", "scss", "diff", "java", "xml", "p
     margin: 1em 0;
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
+
 
     table {
+        background: #f8f8f8;
         position: static;
         display: block;
         width: calc(100% - 1.2rem);
         overflow-x: auto;
         padding: 1rem .6rem .6rem;
         margin: 0;
-        background: #282a36;
     }
 
-    .function .keyword,
-    .constant {
-        color: #0092db;
+
+    .comment,
+    .meta {
+        color: #969896;
+    }
+
+    .string,
+    .variable,
+    .template-variable,
+    .strong,
+    .emphasis,
+    .quote {
+        color: #df5000;
     }
 
     .keyword,
-    .attribute {
-        color: #e96900;
+    .selector-tag,
+    .type {
+        color: #a71d5d;
     }
 
-    .number,
-    .literal {
-        color: #ae81ff;
-    }
-
-    .tag,
-    .tag .title,
-    .change,
-    .winutils,
-    .flow,
-    .lisp .title,
-    .clojure .built_in,
-    .nginx .title,
-    .tex .special {
-        color: #2973b7;
-    }
-
+    .literal,
     .symbol,
-    .symbol .string,
-    .value,
-    .regexp {
-        color: #42b983;
+    .bullet,
+    .attribute {
+        color: #0086b3;
     }
 
-    .title {
-        color: #83B917;
+    .section,
+    .name {
+        color: #70a19f;
     }
 
-    .tag .value,
-    .string,
-    .subst,
-    .haskell .type,
-    .preprocessor,
-    .ruby .class .parent,
-    .built_in,
-    .sql .aggregate,
-    .django .template_tag,
-    .django .variable,
-    .smalltalk .class,
-    .javadoc,
-    .django .filter .argument,
-    .smalltalk .localvars,
-    .smalltalk .array,
-    .attr_selector,
-    .pseudo,
-    .addition,
-    .stream,
-    .envvar,
-    .apache .tag,
-    .apache .cbracket,
-    .tex .command,
-    .prompt {
-        color: #42b983;
+    .tag {
+        color: #333333;
     }
 
-    .comment,
-    .java .annotation,
-    .python .decorator,
-    .template_comment,
-    .pi,
-    .doctype,
-    .shebang,
-    .apache .sqbracket,
-    .tex .formula {
-        color: #b3b3b3;
+    .title,
+    .attr,
+    .selector-id,
+    .selector-class,
+    .selector-attr,
+    .selector-pseudo {
+        color: #795da3;
+    }
+
+    .addition {
+        color: #55a532;
+        background-color: #eaffea;
     }
 
     .deletion {
-        color: #BA4545;
+        color: #bd2c00;
+        background-color: #ffecec;
     }
 
-    .coffeescript .javascript,
-    .javascript .xml,
-    .tex .formula,
-    .xml .javascript,
-    .xml .vbscript,
-    .xml .css,
-    .xml .cdata {
-        opacity: 0.5;
+    .link {
+        text-decoration: underline;
     }
 }
