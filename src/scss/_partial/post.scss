@@ -43,6 +43,7 @@
 
 .post-content {
     padding-bottom: 30px;
+
     h2,
     h3,
     h4,
@@ -50,24 +51,6 @@
     h6 {
         position: relative;
         margin: 1em 0;
-
-        a:before {
-            content: "#";
-            color: #4d939f;
-            position: absolute;
-            left: -0.7em;
-            top: -4px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-    }
-
-    h4,
-    h5,
-    h6 {
-        a:before {
-            content: "";
-        }
     }
 
     h2,
