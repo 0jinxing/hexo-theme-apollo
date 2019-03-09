@@ -35,6 +35,7 @@ const operate = {
     '--build': build,
     '--watch': watch
 }
+
 for (const key of process.argv) {
     if (key in operate) operate[key].call();
 }

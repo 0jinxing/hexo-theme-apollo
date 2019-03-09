@@ -5,7 +5,8 @@
     "doc": "doc"
   },
   "scripts": {
-    "scss": "node scss.js"
+    "build": "node scss.js --build",
+    "watch": "node scss.js --watch"
   },
   "repository": "git+https://github.com/unroll/hexo-theme-apollo.git",
   "author": "Lin Jinxing <172601673@qq.com>",

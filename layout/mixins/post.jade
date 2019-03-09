@@ -1,6 +1,6 @@
 mixin postInfo(item)
     .post-info
-        = full_date(item.date, 'll')
+        = full_date(item.date, 'YYYY/MM/DD')
         if is_home() || is_post()
             if item.from
                 a.post-from(href=item.from target="_blank" title=item.from)= __('source')
@@ -37,7 +37,7 @@ mixin postList()
             .post-item
                 +postInfo(item)
                 a.post-title-link(href= url_for(item.path))
-                    = item.title
+                    = item.title.toUpperCase()
         - })
 
 //- Post Page

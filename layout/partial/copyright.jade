@@ -3,4 +3,8 @@
     - var currentDate = new Date();
     - var year = currentDate.getFullYear();
     - year = year == theme.startyear ? year : theme.startyear + ' - ' + year;
-    p © #{year} #[a(href=config.url)= config.author], powered by #[a(href=hexoURL, target="_blank") Hexo]
+    p.upyun
+        a(href="https://www.upyun.com/")
+            img(src="/assets/upyun.svg", alt="upyun", height="20") 
+        | Providing CDN services
+    p &copy; #{year} #[a(href=config.url)= config.author], powered by #[a(href=hexoURL, target="_blank") Hexo]
