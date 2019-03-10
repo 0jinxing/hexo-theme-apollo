@@ -1,5 +1,5 @@
 ul.nav.nav-list
-    each value, key in theme.menu
+    each value, key in config.menu
         li.nav-list-item
             - var re = /^(http|https):\/\/*/gi;
             - var tar = re.test(value) ? "_blank" : "_self"
