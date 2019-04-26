@@ -1,13 +1,50 @@
 if config.disqus
     #disqus_thread
     script.
-        var disqus_shortname = '#{config.disqus}';
-        var disqus_identifier = '#{page.path}';
-        var disqus_title = '#{page.title}';
-        var disqus_url = '#{config.url}/#{page.path}';
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    script(id='dsq-count-scr' src='//#{config.disqus}.disqus.com/count.js' async)
+        var disqus_shortname = "#{config.disqus}";
+        var disqus_identifier = "#{page.path}";
+        var disqus_title = "#{page.title}";
+        var disqus_url = "#{config.url}/#{page.path}";
+
+        var gitalk_id = "#{config.gitalk_id}";
+        var gitalk_secret = "#{config.gitalk_secret}";
+        var gitalk_repo = "#{config.gitalk_repo}";
+        var gitalk_owner = "#{config.gitalk_owner}";
+
+        function loadGitalk() {
+            if(!gitalk_id) return;
+            new Gitalk({
+                clientID: gitalk_id,
+                clientSecret: gitalk_secret,
+                repo: gitalk_repo,
+                owner: gitalk_owner,
+                admin: [gitalk_owner],
+                id: md5(location.pathname),
+                distractionFreeMode: false
+            }).render("disqus_thread");
+        }
+
+        window.addEventListener("load", function() {
+            if(!disqus_shortname) {
+                loadGitalk();
+                return;
+            }
+            var dsq = document.createElement("script");
+            dsq.type = "text/javascript";
+            dsq.async = true;
+            dsq.addEventListener("load", function() {
+                var dsqc = document.createElement("script");
+                dsqc.type = "text/javascript";
+                dsqc.async = true;
+                dsqc.src = "//" + disqus_shortname + ".disqus.com/count.js";
+                document.head.appendChild(dsqc);
+            });
+
+            dsq.addEventListener("error", function() {
+                loadGitalk();
+            });
+
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            document.head.appendChild(dsq);
+
+        });
