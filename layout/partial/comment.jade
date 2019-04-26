@@ -5,14 +5,16 @@ if config.disqus
         var disqus_identifier = "#{page.path}";
         var disqus_title = "#{page.title}";
         var disqus_url = "#{config.url}/#{page.path}";
+        var disqus_loaded = false;
 
         var gitalk_id = "#{config.gitalk_id}";
         var gitalk_secret = "#{config.gitalk_secret}";
         var gitalk_repo = "#{config.gitalk_repo}";
         var gitalk_owner = "#{config.gitalk_owner}";
+        var gitalk_loaded = false;
 
         function loadGitalk() {
-            if(!gitalk_id) return;
+            if(!gitalk_id || gitalk_loaded) return;
             new Gitalk({
                 clientID: gitalk_id,
                 clientSecret: gitalk_secret,
@@ -22,6 +24,7 @@ if config.disqus
                 id: md5(location.pathname),
                 distractionFreeMode: false
             }).render("disqus_thread");
+            gitalk_loaded = true;
         }
 
         window.addEventListener("load", function() {
@@ -38,6 +41,7 @@ if config.disqus
                 dsqc.async = true;
                 dsqc.src = "//" + disqus_shortname + ".disqus.com/count.js";
                 document.head.appendChild(dsqc);
+                disqus_loaded = true;
             });
 
             dsq.addEventListener("error", function() {
@@ -47,4 +51,10 @@ if config.disqus
             dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
             document.head.appendChild(dsq);
 
+            setTimeout(function() {
+                if(!disqus_loaded){
+                    document.head.removeChild(dsq);
+                    loadGitalk();
+                }
+            }, 1.6 * 1000);
         });
