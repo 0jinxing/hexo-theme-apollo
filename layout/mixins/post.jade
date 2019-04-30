@@ -3,7 +3,7 @@ mixin postInfo(item)
         = full_date(item.date, 'YYYY/MM/DD')
         if is_home() || is_post()
             if item.from
-                a.post-from(href=item.from target="_blank" title=item.from)= __('source')
+                a.post-from(rel="external nofollow" href=item.from target="_blank" title=item.from)= __('source')
             - item.tags.each(function (tag) {
                 a.post-tag(href=config.root+tag.path title=tag.name)= tag.name.toUpperCase()
             - })
