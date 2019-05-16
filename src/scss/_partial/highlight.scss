@@ -1,103 +1,121 @@
 %code-base {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #ccc;
-    text-align: right;
-    font-size: .9em;
-    padding: .4em .8em 0;
-    line-height: 16px;
-    height: 16px;
-    font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ccc;
+  text-align: right;
+  font-size: 0.9em;
+  padding: 0.4em 0.8em 0;
+  line-height: 16px;
+  height: 16px;
+  font-weight: 600;
 }
 
 @mixin code-signs($keys) {
-    @each $key in $keys {
-        .highlight.#{$key} table::after {
-            content: to-upper-case($key);
-            @extend %code-base;
-        }
+  @each $key in $keys {
+    .highlight.#{$key} table::after {
+      content: to-upper-case($key);
+      @extend %code-base;
     }
+  }
 }
 
-$signs: ("plain", "html", "js", "bash", "css", "scss", "diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
+$signs: (
+  "plain",
+  "html",
+  "js",
+  "bash",
+  "css",
+  "scss",
+  "diff",
+  "java",
+  "xml",
+  "python",
+  "json",
+  "swift",
+  "ruby",
+  "perl",
+  "php",
+  "c",
+  "java",
+  "cpp",
+  "ts"
+);
 @include code-signs($signs);
 
 .highlight {
-    margin: 1em 0;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
+  margin: 1em 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
 
+  table {
+    background: #f8f8f8;
+    position: static;
+    display: block;
+    width: calc(100% - 1.2em);
+    overflow-x: auto;
+    padding: 1.3em 0.6em 0.6em;
+    margin: 0;
+  }
 
-    table {
-        background: #f8f8f8;
-        position: static;
-        display: block;
-        width: calc(100% - 1.2em);
-        overflow-x: auto;
-        padding: 1.3em .6em .6em;
-        margin: 0;
-    }
+  .comment,
+  .meta {
+    color: #969896;
+  }
 
+  .string,
+  .variable,
+  .template-variable,
+  .strong,
+  .emphasis,
+  .quote {
+    color: #df5000;
+  }
 
-    .comment,
-    .meta {
-        color: #969896;
-    }
+  .keyword,
+  .selector-tag,
+  .type {
+    color: #a71d5d;
+  }
 
-    .string,
-    .variable,
-    .template-variable,
-    .strong,
-    .emphasis,
-    .quote {
-        color: #df5000;
-    }
+  .literal,
+  .symbol,
+  .bullet,
+  .attribute {
+    color: #0086b3;
+  }
 
-    .keyword,
-    .selector-tag,
-    .type {
-        color: #a71d5d;
-    }
+  .section,
+  .name {
+    color: #376496;
+  }
 
-    .literal,
-    .symbol,
-    .bullet,
-    .attribute {
-        color: #0086b3;
-    }
+  .tag {
+    color: #333333;
+  }
 
-    .section,
-    .name {
-        color: #376496;
-    }
+  .title,
+  .attr,
+  .selector-id,
+  .selector-class,
+  .selector-attr,
+  .selector-pseudo {
+    color: #795da3;
+  }
 
-    .tag {
-        color: #333333;
-    }
+  .addition {
+    color: #55a532;
+    background-color: #eaffea;
+  }
 
-    .title,
-    .attr,
-    .selector-id,
-    .selector-class,
-    .selector-attr,
-    .selector-pseudo {
-        color: #795da3;
-    }
+  .deletion {
+    color: #bd2c00;
+    background-color: #ffecec;
+  }
 
-    .addition {
-        color: #55a532;
-        background-color: #eaffea;
-    }
-
-    .deletion {
-        color: #bd2c00;
-        background-color: #ffecec;
-    }
-
-    .link {
-        text-decoration: underline;
-    }
+  .link {
+    text-decoration: underline;
+  }
 }

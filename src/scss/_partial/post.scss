@@ -1,47 +1,46 @@
 .post {
-    padding-top: 1em;
-}
+  padding-top: 1em;
 
-.post-block {
+  .post-block {
     .post-title {
-        margin: 0.65em 0;
-        color: #2c3e50;
-        font-size: 1.5em;
+      margin: 0.65em 0;
+      color: #2c3e50;
+      font-size: 1.5em;
     }
 
     .post-info {
-        color: #7f8c8d;
-        margin: 1.2em 0;
+      color: #7f8c8d;
+      margin: 1.2em 0;
 
-        span {
-            margin-left: 0.5rem;
-        }
+      span {
+        margin-left: 0.5rem;
+      }
 
-        a.post-from,
-        a.post-tag,
-        a.post-category {
-            margin-left: 0.5rem;
-            padding: 3px 6px;
-            border-radius: 5px;
-            font-size: 12px;
-            color: white;
-        }
+      a.post-from,
+      a.post-tag,
+      a.post-category {
+        margin-left: 0.5rem;
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-size: 12px;
+        color: white;
+      }
 
-        a.post-from {
-            background-color: #ca8687;
-        }
+      a.post-from {
+        background-color: #ca8687;
+      }
 
-        a.post-tag {
-            background-color: #70a19f;
-        }
+      a.post-tag {
+        background-color: #70a19f;
+      }
 
-        a.post-category {
-            background-color: #759FBD;
-        }
+      a.post-category {
+        background-color: #759fbd;
+      }
     }
-}
+  }
 
-.post-content {
+  .post-content {
     padding-bottom: 30px;
 
     h2,
@@ -49,48 +48,56 @@
     h4,
     h5,
     h6 {
-        position: relative;
-        margin: 1em 0;
+      position: relative;
+      margin: 1em 0;
     }
 
     h2,
     h3 {
-        font-size: 22px;
+      font-size: 22px;
     }
 
     h4,
     h5,
     h6 {
-        font-size: 18px;
+      font-size: 18px;
     }
 
     a {
-        color: #4d939f;
-        word-break: break-all;
+      color: #4d939f;
+      word-break: break-all;
 
-        &:hover {
-            color: #3b3e47;
-        }
+      &:hover {
+        color: #3b3e47;
+      }
     }
 
     blockquote {
-        margin: 2em 0;
-        padding-left: 20px;
-        border-left: 4px solid #4d939f;
+      margin: 2em 0;
+      padding-left: 20px;
+      border-left: 4px solid #4d939f;
     }
 
     img {
-        display: block;
-        max-width: 100%;
-        margin: 1em auto;
+      display: block;
+      max-width: 100%;
+      margin: 1em auto;
     }
 
-    &>table {
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
-
-        th,
-        td {
-            border: 1px solid #34495e;
-        }
+    iframe,
+    video {
+      max-width: 100%;
+      margin: 1rem auto;
+      display: block;
     }
+
+    & > table {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
+
+      th,
+      td {
+        border: 1px solid #34495e;
+      }
+    }
+  }
 }

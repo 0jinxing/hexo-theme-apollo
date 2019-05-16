@@ -1,37 +1,36 @@
 .home.post-list {
-    margin: 0;
+  margin: 0;
 
-    .post-list-item {
-        padding: 1em 0 2em;
-        border-bottom: 1px solid #ddd;
+  .post-list-item {
+    padding: 1em 0 2em;
+    border-bottom: 1px solid #ddd;
 
-        &:last-child {
-            border-bottom: 0px;
-        }
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+
+  .post-content {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:before {
+        content: "";
+      }
     }
 
-    .post-content {
-
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            &:before {
-                content: '';
-            }
-        }
-
-        &>ul {
-            list-style: initial;
-        }
+    & > ul {
+      list-style: initial;
     }
+  }
 
-    .read-more {
-        color: #4d939f;
+  .read-more {
+    color: #4d939f;
 
-        &:hover {
-            color: #3b3e47;
-        }
+    &:hover {
+      color: #3b3e47;
     }
+  }
 }

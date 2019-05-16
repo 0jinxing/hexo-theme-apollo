@@ -1,29 +1,29 @@
 footer {
-    padding-bottom: 1px;
+  padding-bottom: 1px;
 
-    .copyright {
-        margin: 2em 0;
-        border-top: 1px solid #ddd;
-        text-align: center;
+  .copyright {
+    margin: 2em 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
 
-        p,
-        a {
-            color: #aaa;
-            font-size: 14px;
-            font-weight: 100;
-        }
-
-        a:hover {
-            color: #888;
-        }
+    p,
+    a {
+      color: #aaa;
+      font-size: 14px;
+      font-weight: 100;
     }
+
+    a:hover {
+      color: #888;
+    }
+  }
 }
 
 .upyun {
-    line-height: 20px;
-    img {
-        height: 20px;
-        vertical-align: bottom;
-        margin-right: .6em;
-    }
+  line-height: 20px;
+  img {
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 0.6em;
+  }
 }

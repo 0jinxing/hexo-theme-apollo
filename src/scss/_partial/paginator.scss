@@ -1,21 +1,31 @@
 .paginator {
-    margin: .4em 0 0 0;
-    text-align: center;
+  margin: 0.4em 0 0 0;
+  text-align: center;
 
-    .prev,
-    .next {
-        display: inline-block;
-        margin: 0 4px;
-        padding: 4px 12px;
-        border-radius: 4px;
-        font-size: 14px;
-        color: #fff;
-        background-color: #5ea4b1;
-        background-image: linear-gradient(to bottom, #5ea4b1 0, #5ea4b1 90%, #4d939f 0);
+  .prev,
+  .next {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #5ea4b1;
+    background-image: linear-gradient(
+      to bottom,
+      #5ea4b1 0,
+      #5ea4b1 90%,
+      #4d939f 0
+    );
 
-        &:hover {
-            background-color: #549ca8;
-            background-image: linear-gradient(to bottom, #549ca8 0, #549ca8 95%, #4d939f 0);
-        }
+    &:hover {
+      background-color: #549ca8;
+      background-image: linear-gradient(
+        to bottom,
+        #549ca8 0,
+        #549ca8 95%,
+        #4d939f 0
+      );
     }
+  }
 }

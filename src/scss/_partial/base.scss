@@ -1,115 +1,108 @@
 ::selection {
-    color: #FFFFFF;
-    background-color: #4d939f;
+  color: #ffffff;
+  background-color: #4d939f;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    color: #34495e;
-    font-size: 14px;
-    line-height: 1.6;
-    background-color: #fff;
-    font-family: monospace;
+  margin: 0;
+  color: #34495e;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: #fff;
+  font-family: monospace;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: arial, sans-serif;
-        font-weight: normal;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: arial, sans-serif;
+    font-weight: normal;
+  }
 }
 
 ul.nav,
 ul.post-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 ul {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 a,
 a:active {
-    color: #2c3e50;
-    text-decoration: none;
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 a.nav-list-link.active,
 a.nav-list-link:hover,
 a.post-title-link:hover {
-    border-bottom: 2px solid #4d939f;
+  border-bottom: 2px solid #4d939f;
 }
 
 hr {
-    border: 0;
+  border: 0;
 }
 
 code,
 pre {
-    font-size: .9em;
-    color: #34495e;
+  font-size: 0.9em;
+  color: #34495e;
 }
 
 code {
-    margin: 0 2px;
-    padding: 3px 5px;
-    color: #de7062;
-    border-radius: 4px;
-    white-space: inherit;
-    background-color: #f8f8f8;
-}
-
-iframe,
-video {
-    max-width: 100%;
-    margin: 1rem auto;
-    display: block;
+  margin: 0 2px;
+  padding: 3px 5px;
+  color: #de7062;
+  border-radius: 4px;
+  white-space: inherit;
+  background-color: #f8f8f8;
 }
 
 table {
-    width: 100%;
-    margin: 1em auto;
+  width: 100%;
+  margin: 1em auto;
 
-    thead {
-        background-color: #ddd;
+  thead {
+    background-color: #ddd;
 
-        th {
-            padding: 5px;
-            min-width: 20px;
-        }
+    th {
+      padding: 5px;
+      min-width: 20px;
+    }
+  }
+
+  tbody {
+    tr:nth-child(2n) {
+      background-color: #eee;
     }
 
-    tbody {
-        tr:nth-child(2n) {
-            background-color: #eee;
-        }
-
-        td {
-            padding: 5px;
-            vertical-align: text-top;
-        }
+    td {
+      padding: 5px;
+      vertical-align: text-top;
     }
+  }
 
-    pre {
-        margin: 0;
-    }
+  pre {
+    margin: 0;
+  }
 
-    .gutter .line {
-        color: #8f8f8f;
-    }
+  .gutter .line {
+    color: #8f8f8f;
+  }
 }
