@@ -1,0 +1,51 @@
+mixin postInfo(item)
+  .post-info
+    = full_date(item.date, 'YYYY/MM/DD')
+    if is_home() || is_post()
+      if item.from
+        a.post-from(rel="external nofollow" href=item.from target="_blank" title=item.from)= __('source')
+      - item.tags.each(function (tag) {
+        a.post-tag(href=config.root+tag.path title=tag.name)= tag.name.toUpperCase()
+      - })
+      - item.categories.each(function (category){
+        a.post-category(href=config.root+category.path title=category.name)= category.name.toUpperCase()
+      - })
+
+//- Index Page
+mixin posts()
+  ul.home.post-list
+    - page.posts.each(function (item) {
+      li.post-list-item
+        article.post-block
+          h2.post-title
+            a.post-title-link(href= url_for(item.path))
+              = item.title
+          +postInfo(item)
+          .post-content
+            != item.excerpt
+          a.read-more(href= url_for(item.path))= __('more')
+    - })
+
+//- Archive Page
+mixin postList()
+  .archive
+    if is_tag() || is_category()
+      h2.archive-header= (page.tag || page.category).toUpperCase()
+    else
+      h2.archive-header= __('archive')
+    - page.posts.each(function (item) {
+      .post-item
+        +postInfo(item)
+        a.post-title-link(href= url_for(item.path))
+          = item.title.toUpperCase()
+    - })
+
+//- Post Page
+mixin post(item)
+  .post
+    article.post-block
+      h1.post-title
+        = item.title
+      +postInfo(item)
+      .post-content
+        != item.content
