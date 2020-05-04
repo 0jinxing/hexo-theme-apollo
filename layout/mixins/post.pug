@@ -1,6 +1,7 @@
 mixin postInfo(item)
   .post-info
-    = full_date(item.date, 'YYYY/MM/DD')
+    span
+      = full_date(item.date, 'YYYY/MM/DD')
     if is_home() || is_post()
       if item.from
         a.post-from(rel="external nofollow" href=item.from target="_blank" title=item.from)= __('source')
