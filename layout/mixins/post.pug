@@ -4,7 +4,7 @@ mixin postInfo(item)
       = full_date(item.date, 'YYYY/MM/DD')
     if is_home() || is_post()
       if item.from
-        a.post-from(rel="external nofollow" href=item.from target="_blank" title=item.from)= __('source')
+        a.post-from(rel="external nofollow" href=item.from target="_blank" title=item.from)= __('source').toUpperCase()
       - item.tags.each(function (tag) {
         a.post-tag(href=config.root+tag.path title=tag.name)= tag.name.toUpperCase()
       - })
@@ -33,7 +33,7 @@ mixin postList()
     if is_tag() || is_category()
       h2.archive-header= (page.tag || page.category).toUpperCase()
     else
-      h2.archive-header= __('archive')
+      h2.archive-header= __('archive').toUpperCase()
     - page.posts.each(function (item) {
       .post-item
         +postInfo(item)
